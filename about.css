@@ -1,0 +1,647 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "League Spartan", sans-serif;
+    text-decoration: none;
+  }
+  body {
+    width: 100%;
+    background-color: hsl(0, 1%, 26%);
+  }
+  
+  :root{
+    --white-color:#FFFFFF;
+    --red-color:#E53935;
+    --yellow-color:#FDD835;
+    --Orange-color:#FB8C00;
+    --Black-color:#212121;
+    --Pink-color:#F48FB1;
+    --Blue-color:#81D4FA;
+    --yellowglob-color:#FFD54F;
+    --gray-color:#455A64;
+    --prime-color:#3b141c;
+    --medium-gray-color:#ccc;
+    --light-pink-color:#faf4f5;
+    --main-color:#ff702a;
+    
+    --secondary-color: #ffcc80;
+  
+}
+
+/* ======== استایل اسکرول‌بار برای مرورگرهای مدرن ======== */
+
+/* برای مرورگرهای WebKit (Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+  width: 10px; /* پهنای اسکرول‌بار */
+}
+
+  /* رنگ پس‌زمینه‌ی اسکرول‌بار */
+  ::-webkit-scrollbar-track {
+    background: hsl(0, 3%, 18%); /* خاکستری تیره‌تر از پس‌زمینه‌ی بادی */
+    border-radius: 10px;
+  }
+  
+  /* رنگ اسکرول (دسته‌ی اسکرول) */
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #f4a261, #e9c46a); /* ترکیب نارنجی و زرد طلایی */
+    border-radius: 10px;
+    transition: background 0.3s ease-in-out;
+  }
+  
+  /* افکت هنگام هاور روی اسکرول */
+  ::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, #e76f51, #f4a261); /* تغییر رنگ به طیف گرم‌تر */
+  }
+  
+  /* ======== برای فایرفاکس (scrollbar-width) ======== */
+  html {
+    scrollbar-width: thin; /* باریک‌تر کردن اسکرول‌بار */
+    scrollbar-color: #f4a261 hsl(0, 3%, 18%); /* رنگ دسته و پس‌زمینه */
+  }
+/* استایل کلی لودینگ */
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #1a0d04; /* پس‌زمینه تیره */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
+}
+
+/* دایره چرخان */
+.loader-circle {
+  width: 50px;
+  height: 50px;
+  border: 5px solid rgba(255, 255, 255, 0.2);
+  border-top-color: #ffcc80;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 20px; /* فاصله از لوگو */
+}
+
+/* انیمیشن چرخش دایره */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* استایل لوگو */
+.logo-animation {
+  font-size: 2.5rem;
+  color: #ffcc80;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: "Playwrite HR Lijeva", cursive;
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  text-align: center;
+  animation: glow 1.5s ease-in-out infinite alternate, fadeIn 2s ease-out;
+}
+
+/* افکت درخشش */
+@keyframes glow {
+  0% { text-shadow: 0 0 10px #ffcc80, 0 0 20px #ffcc80; }
+  100% { text-shadow: 0 0 20px #ffcc80, 0 0 40px #ffcc80; }
+}
+
+/* افکت ظاهر شدن */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: scale(0.9); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+/* مخفی کردن لودینگ بعد از لود کامل */
+.preloader.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* header styles */
+.nav-logo h2{
+    
+    color: var(--yellowglob-color);
+    font-family: "Playwrite HR Lijeva", cursive;
+    font-weight: 400;
+    font-size: 30px;
+    cursor: pointer;
+
+}
+span{
+  color: var(--yellowglob-color);
+    font-family: "Playwrite HR Lijeva", cursive;
+}
+
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--gray-color);
+    padding: 20px 80px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+    z-index: 999;
+    position:fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--Black-color) !important; /* رنگ پس‌زمینه مشکی */
+
+  }
+  
+  .header-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .header-list-nav ul {
+    display: flex;
+  }
+  .header-list-nav ul li {
+    list-style-type: none;
+    padding: 0 20px;
+    position: relative;
+  }
+  .header-list-nav ul a {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: #ece8e8;
+    transition: 0.3s ease;
+  }
+  .header-list-nav ul a:hover,
+  .header-list-nav ul a.active {
+    color: var(--yellowglob-color);
+  transform: scale(1.1);
+  text-shadow: 0 0 10px var(--yellowglob-color),
+    0 0 20px var(--yellowglob-color);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+  }
+  .header-list-icon a {
+    color: #1a1a1a;
+    padding-left: 20px;
+    transition: 0.3s ease;
+  }
+  .header-list-icon a:hover,
+  .header-list-nav ul a.active {
+    color: var(--yellowglob-color);
+  }
+  .header-list-nav ul li a:hover::after,
+  .header-list-nav ul li a.active::after {
+    content: "";
+    width: 30%;
+    height: 2px;
+    background: var(--yellowglob-color);
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+  }
+  
+
+
+  /* بخش درباره ما */
+.about-section {
+  width: 100%;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: hsl(0, 1%, 26%);
+  padding: 50px 0;
+}
+
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  width: 90%;
+  margin: auto;
+  gap: 40px;
+}
+
+.about-text {
+  flex: 1;
+  text-align: right;
+  color: #fff;
+}
+
+.about-text h1 {
+  font-size: 48px;
+  position: relative;
+  display: inline-block;
+}
+
+.about-text h1::after {
+  content: '';
+  width: 70px;
+  height: 4px;
+  background: #ffcc00;
+  position: absolute;
+  bottom: -10px;
+  right: 0;
+}
+
+.about-text p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #ddd;
+  margin-top: 20px;
+}
+
+.about-text span {
+  color: #ffcc00;
+  font-weight: bold;
+}
+
+.about-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 30px;
+  background: linear-gradient(135deg, #ffcc00, #ff8800);
+  color: #222;
+  font-size: 16px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+}
+
+.about-btn:hover {
+  background: linear-gradient(135deg, #ff8800, #ffcc00);
+  transform: scale(1.05);
+}
+
+/* استایل تصاویر */
+.about-images {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.about-img {
+  width: 45%;
+  max-width: 280px;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.about-img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* ریسپانسیو برای موبایل */
+@media (max-width: 768px) {
+  .about-container {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .about-images {
+      flex-direction: column;
+  }
+
+  .about-img {
+      width: 80%;
+  }
+}
+
+
+.why-us {
+  background: hsl(0, 1%, 26%);
+  padding: 80px 20px;
+  text-align: center;
+  color: #fff;
+}
+.section-title {
+  font-size: 2.5rem;
+  color: var(--yellow-color);
+  margin-bottom: 10px;
+}
+.section-subtitle {
+  font-size: 1.2rem;
+  color: var(--medium-gray-color);
+  margin-bottom: 40px;
+}
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  max-width: 1100px;
+  margin: auto;
+}
+.feature {
+  background: #333;
+  padding: 20px;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
+}
+.feature:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2);
+}
+.feature-icon {
+  font-size: 3rem;
+  color: var(--Orange-color);
+  margin-bottom: 15px;
+}
+.feature h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: var(--yellowglob-color);
+}
+.feature p {
+  font-size: 1rem;
+  color: #ccc;
+}
+
+
+.customer-reviews {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #212121, #3b141c);
+  color: #fff;
+}
+
+.customer-reviews h2 {
+  font-size: 2.5rem;
+  color: #fdd835;
+}
+
+.reviews-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.review-card {
+  background: #333;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
+  text-align: center;
+  max-width: 300px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.review-card:hover {
+  transform: scale(1.05);
+}
+
+.customer-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.review-text {
+  font-size: 1rem;
+  color: #ddd;
+  margin: 10px 0;
+}
+
+.stars {
+  font-size: 1.2rem;
+  color: #fdd835;
+}
+
+
+.faq-section {
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #3b141c, #212121);
+  color: #fff;
+  text-align: center;
+  
+}
+
+.faq-section h2 {
+  font-size: 2.5rem;
+  color: #fdd835;
+  margin-bottom: 20px;
+}
+
+.faq-container {
+  max-width: 800px;
+  margin: auto;
+  text-align: right;
+}
+
+.faq-item {
+  background: #333;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.faq-question {
+  width: 100%;
+  background: transparent;
+  color: #ffcc00;
+  padding: 15px;
+  border: none;
+  text-align: right;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.faq-answer {
+  background: #444;
+  color: #ddd;
+  padding: 15px;
+  display: none;
+  font-size: 1rem;
+}
+
+.faq-question i {
+  transition: transform 0.3s;
+}
+
+/* افکت باز شدن سوالات */
+.faq-item.active .faq-answer {
+  display: block;
+}
+
+.faq-item.active .faq-question i {
+  transform: rotate(180deg);
+}
+
+
+
+
+.modern-footer {
+  background: linear-gradient(135deg, #3b141c, #212121);
+  color: #fff;
+  padding: 60px 20px;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.footer-column h3 {
+  color: #fdd835;
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+}
+
+.footer-column p, 
+.footer-column ul {
+  color: #ccc;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+  color: #ffcc80;
+  transition: color 0.3s ease-in-out;
+}
+
+.footer-column ul li a:hover {
+  color: #ff8c00;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.social-icons a {
+  color: #ffcc80;
+  font-size: 1.5rem;
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.social-icons a:hover {
+  color: #ff8c00;
+  transform: scale(1.2);
+}
+
+.footer-bottom {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #444;
+  color: #bbb;
+  font-size: 0.9rem;
+}
+
+.footer-bottom span {
+  color: #fdd835;
+}
+
+/* ریسپانسیو */
+@media (max-width: 768px) {
+  .footer-container {
+      grid-template-columns: repeat(2, 1fr);
+      text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-container {
+      grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+
+  
+/* ======== استایل اسکرول‌بار برای مرورگرهای مدرن ======== */
+
+/* برای مرورگرهای WebKit (Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+  width: 10px; /* پهنای اسکرول‌بار */
+}
+
+/* رنگ پس‌زمینه‌ی اسکرول‌بار */
+::-webkit-scrollbar-track {
+  background: hsl(0, 3%, 18%); /* خاکستری تیره‌تر از پس‌زمینه‌ی بادی */
+  border-radius: 10px;
+}
+
+/* رنگ اسکرول (دسته‌ی اسکرول) */
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #f4a261, #e9c46a); /* ترکیب نارنجی و زرد طلایی */
+  border-radius: 10px;
+  transition: background 0.3s ease-in-out;
+}
+
+/* افکت هنگام هاور روی اسکرول */
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #e76f51, #f4a261); /* تغییر رنگ به طیف گرم‌تر */
+}
+
+/* ======== برای فایرفاکس (scrollbar-width) ======== */
+html {
+  scrollbar-width: thin; /* باریک‌تر کردن اسکرول‌بار */
+  scrollbar-color: #f4a261 hsl(0, 3%, 18%); /* رنگ دسته و پس‌زمینه */
+}
+
+/* ======== دکمه پیمایش به بالا (Scroll to Top) ======== */
+
+.scroll-top-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  list-style: none;
+  z-index: 1000;
+}
+
+.scroll-top {
+  width: 55px;
+  height: 55px;
+  background: var(--turquoise); /* رنگ فیروزه‌ای */
+  color: #fff;
+  font-size: 1.5rem;
+  text-align: center;
+  line-height: 55px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0.8);
+  transition: all 0.3s ease-in-out;
+}

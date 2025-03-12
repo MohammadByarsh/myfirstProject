@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="fa">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TastyLand</title>
+    <!-- Link css -->
+    <link rel="stylesheet" href="menu.css" />
+    <!-- Link Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playwrite+HR+Lijeva:wght@100..400&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      href="imagesIMG/_377d8ed4-d229-43a5-87fa-dd3af7dc2715 (1).png"
+      type="image/png"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+
+    <!-- Link Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100..900&display=swap"     rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+HR+Lijeva:wght@100..400&display=swap" rel="stylesheet">
+  </head>
+  <body dir="rtl">
+    <div class="preloader">
+      <div class="loader-circle"></div>
+      <!-- دایره لودینگ -->
+      <h1 class="logo-animation">TastyLand</h1>
+    </div>
+
+    <header class="header" id="header">
+      <nav class="nav container">
+        <a href="#" class="nav-logo" title="TastyLand"><h2>TastyLand</h2></a>
+        <div class="nav--menu">
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a href="welcome.html" class="nav-links">خوشامد گویی</a>
+            </li>
+            <li class="nav-item">
+              <a href="menu.html" class="nav-links active">صفحه اصلی</a>
+            </li>
+            <li class="nav-item">
+              <a href="food-menu.html" class="nav-links">منوی غذا</a>
+            </li>
+
+            <li class="nav-item">
+              <a href="About.html" class="nav-links">درباره ما</a>
+            </li>
+            <li class="nav-item">
+              <a href="Content.html" class="nav-links">تماس با ما</a>
+            </li>
+          </ul>
+        </div>
+        <div class="nav--actions">
+          <i
+            class="fas fa-search search-button"
+            title="جستجو کنید"
+            id="search-button"
+          ></i>
+
+          <i
+            class="fas fa-user login-button login-icon"
+            id="login-button"
+            title="وارد شوید"
+          ></i>
+
+          <i
+            class="fas fa-shopping-cart cart-icon"
+            id="cart-icon"
+            title="لیست خرید"
+          ></i>
+
+          <i
+            class="fas fa-heart heart-solid"
+            id="heart-solid"
+            title="مورد علاقه"
+          ></i>
+        </div>
+      </nav>
+    </header>
+
+
+    <!-- سایدبار سبد خرید -->
+<div id="cart-sidebar">
+  <div class="cart-header">
+    <h2>سبد خرید</h2>
+    <button id="close-cart">&times;</button>
+  </div>
+  <div class="cart-items">
+    <p>سبد خرید شما خالی است.</p>
+  </div>
+  <div class="cart-footer">
+    <button class="checkout-btn">پرداخت</button>
+  </div>
+</div>
+
+<!-- پس‌زمینه برای بستن سایدبار -->
+<div id="cart-overlay"></div>
+
+<!-- سایدبار لیست علاقه‌مندی‌ها -->
+<div id="wishlist-sidebar">
+  <div class="wishlist-header">
+    <h2>لیست علاقه‌مندی‌ها</h2>
+    <button id="close-wishlist">&times;</button>
+  </div>
+  <div class="wishlist-items">
+    <p>هنوز هیچ آیتمی به لیست علاقه‌مندی‌های شما اضافه نشده است.</p>
+  </div>
+  <div class="wishlist-footer">
+    <button class="wishlist-btn">مشاهده همه</button>
+  </div>
+</div>
+
+<!-- پس‌زمینه برای بستن سایدبار -->
+<div id="wishlist-overlay"></div>
+
+
+
+    <!-- ==============search================= -->
+
+    <div class="search" id="search-content">
+      <form action="" class="search__form">
+        <i
+          class="fas fa-search search-icon"
+          title="جستجو کنید"
+          id="search-button"
+        ></i>
+
+        <!-- این div برای استایل بهتر input و دکمه بستن -->
+        <div class="search-box">
+          <input
+            type="search"
+            id="search-input"
+            placeholder="بدنبال محصول خاصی میگردید؟"
+            class="search--inpute"
+          />
+          <span id="clear-search" class="clear-button">✖</span>
+        </div>
+      </form>
+
+      <i class="fas fa-times search-close" title="بستن" id="search-close"></i>
+    </div>
+    <!-- ==============nav================= -->
+
+    <section class="hero" id="hero">
+      <div class="hero-slider" data-hero-slider>
+        <div class="hero-item active" data-hero-slider-item>
+          <img src="imagesIMG/hero-slider-1.jpg" alt="Delicious Food" />
+          <div class="hero-content">
+            <h1>غذای خوشمزه و سالم</h1>
+            <p>با کیفیتی استثنایی برای شما</p>
+            <a href="food-menu.html" class="btn">مشاهده منو</a>
+          </div>
+        </div>
+        <div class="hero-item" data-hero-slider-item>
+          <img src="imagesIMG/hero-slider-2.jpg" alt="Gourmet Dining" />
+          <div class="hero-content">
+            <h1>عشق در هر لقمه</h1>
+            <p>سفر به دنیای طعم‌های ناب</p>
+            <a href="food-menu.html" class="btn">رزرو میز</a>
+          </div>
+        </div>
+        <div class="hero-item" data-hero-slider-item>
+          <img src="imagesIMG/hero-slider-3.jpg" alt="Fine Dining Experience" />
+          <div class="hero-content">
+            <h1>غذای لذیذ، لحظاتی خاص</h1>
+            <p>با ما بهترین‌ها را تجربه کنید</p>
+            <a href="About.html" class="btn">اطلاعات بیشتر</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Navigation buttons -->
+      <button class="next-btn" data-next-btn>❯</button>
+      <button class="prev-btn" data-prev-btn>❮</button>
+    </section>
+
+    <!-- 
+        - #SERVICE
+      -->
+
+    <section
+      class="section service bg-black-10 text-center"
+      aria-label="service"
+    >
+      <div class="container">
+        <div class="service-header">
+          <p class="section-subtitle">طعم‌های خاص</p>
+          <h2 class="section-title">خدمات ما</h2>
+          <p class="section-text">
+            انتخابی از بهترین غذاها برای تجربه‌ای بی‌نظیر
+          </p>
+        </div>
+
+        <ul class="grid-list service-grid">
+          <!-- صبحانه -->
+          <li class="service-item top-item">
+            <div class="service-card">
+              <a href="#" class="has-before hover:shine">
+                <figure class="card-banner img-holder">
+                  <img
+                    src="imagesIMG/service-1.jpg"
+                    alt="صبحانه"
+                    class="img-cover"
+                  />
+                </figure>
+              </a>
+              <div class="card-content">
+                <h3 class="title-4 card-title"><a href="#">صبحانه</a></h3>
+                <a href="#" class="btn-text hover-underline label-2"
+                  >مشاهده منو</a
+                >
+              </div>
+            </div>
+            <img
+              src="imagesIMG/shape-1.png"
+              width="246"
+              height="412"
+              loading="lazy"
+              alt="shape"
+              class="shape shape-1 move-anim"
+            />
+          </li>
+
+          <!-- پیش‌غذا (وسط) -->
+          <li class="service-item middle-item">
+            <div class="service-header"></div>
+            <div class="service-card">
+              <a href="#" class="has-before hover:shine">
+                <figure class="card-banner img-holder">
+                  <img
+                    src="imagesIMG/service-2.jpg"
+                    alt="پیش‌غذا"
+                    class="img-cover"
+                  />
+                </figure>
+              </a>
+              <div class="card-content">
+                <h3 class="title-4 card-title"><a href="#">پیش‌غذا</a></h3>
+                <a href="#" class="btn-text hover-underline label-2"
+                  >مشاهده منو</a
+                >
+              </div>
+            </div>
+          </li>
+
+          <!-- نوشیدنی -->
+          <li class="service-item top-item">
+            <div class="service-card">
+              <a href="#" class="has-before hover:shine">
+                <figure class="card-banner img-holder">
+                  <img
+                    src="imagesIMG/service-3.jpg"
+                    alt="نوشیدنی"
+                    class="img-cover"
+                  />
+                </figure>
+              </a>
+              <div class="card-content">
+                <h3 class="title-4 card-title"><a href="#">نوشیدنی</a></h3>
+                <a href="#" class="btn-text hover-underline label-2"
+                  >مشاهده منو</a
+                >
+              </div>
+            </div>
+            <img
+              src="imagesIMG/shape-2.png"
+              width="343"
+              height="345"
+              loading="lazy"
+              alt="shape"
+              class="shape shape-2 move-anim"
+            />
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ==============food=================
+      
+      
+    
+    <section class="food">
+      <div class="container">
+        <div class="food-box">
+          <img src="" alt="food" class="food-img">
+          <h2 class="food-title">پیتزا</h2>
+          <h3 class="price">200 تومان</h3>
+          <button class="add-cart">
+            اضافه به لیست خرید
+          </button>
+        </div>
+      </div>
+    </section> -->
+
+    <!-- ==============offer================= -->
+
+    <section class="offer">
+      <div class="container">
+        <div class="offer-wrapper">
+          <!-- تصویر سمت چپ -->
+          <div class="offerimg">
+            <div class="slider">
+              <img
+                src="imagesIMG/doubleburger-1.jpg"
+                alt="برگر دوبل"
+                class="active"
+              />
+              <img src="imagesIMG/doubleburger-2.jpg" alt="برگر دوبل" />
+              <img src="imagesIMG/doubleburger-3.jpg" alt="برگر دوبل" />
+            </div>
+          </div>
+
+          <!-- متن سمت راست -->
+          <div class="offer-content">
+            <div class="subtitle">محصولات تخفیف خورده ما</div>
+            <h2>
+              برگر دوبل <br />
+              <span class="highlight">30% تخفیف برای جمعه‌ها</span>
+            </h2>
+            <p>
+              اگر عاشق طعم‌های خاص هستید، این پیشنهاد را از دست ندهید!
+              <span class="bold-text">برگر دوبل</span> با ترکیب دو لایه گوشت
+              تازه، پنیر آب‌شده، سس مخصوص و سبزیجات تازه، طعمی فراموش‌نشدنی را
+              برای شما به ارمغان می‌آورد.
+            </p>
+            <p>
+              هر جمعه می‌توانید این برگر فوق‌العاده را با
+              <span class="highlight">30% تخفیف ویژه</span> تهیه کنید و لذت
+              ببرید!
+            </p>
+            <a href="#" class="btnfood">مشاهده منو</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============footer================= -->
+
+    <footer id="footer">
+      <div class="footer-nav">
+        <a href="Menu.html" class="nav-item"><i class="fas fa-home"></i></a>
+        <a href="FastFood.html" class="nav-item"
+          ><i class="fas fa-pizza-slice"></i
+        ></a>
+        <a href="About.html" class="nav-item"
+          ><i class="fas fa-info-circle"></i
+        ></a>
+        <a href="Content.html" class="nav-item"
+          ><i class="fas fa-phone-alt"></i
+        ></a>
+      </div>
+    </footer>
+
+    <!-- ==============scroll================= -->
+
+    <ul class="scroll-top-container">
+      <li id="scrollTopBtn" class="scroll-top">
+        <i class="fas fa-arrow-up"></i>
+      </li>
+    </ul>
+
+    <!-- Form login -->
+    <div class="blur-bg-overly"></div>
+    <div class="form-peapol">
+        <span class="Close-btn"><img class="Close" src="imagesIMG/Symbole/cross.png" alt="Close" title="Close"></span>
+      <div class="form-box login">
+          <div class="form-welcome">
+              <h2>خوشامد دوباره</h2>
+              <p>به دنیای خوشمزه ما خوش آمدید! لطفاً وارد حساب کاربری خود شوید و سفر خود را به سمت طعم‌های لذیذ و لحظات خوش آغاز کنید. اینجا در کنار شما، طعمی فراتر از تصور را تجربه خواهید کرد.</p>
+          </div>
+          <div class="form-content">
+              <h2>وارد شوید</h2>
+              <form action="#">
+                  <div class="input-field">
+                      <input class="input" type="text" title="Email address" required >
+                      <label for="">ادرس ایمیل را وارد کنید:</label>
+                  </div>
+                  <div class="input-field">
+                      <input type="password" title="password" required>
+                      <label for="">رمز عبور خود را وارد کنید:</label>
+                  </div>
+                  <div class="Hide-text">
+                      <input type="checkbox" id="Hide">
+                      <label for="Hide">
+                          <p>نمایش رمز عبور</p>
+                          
+                      </label>
+                  </div>
+                  <a href="#" class="forgot-pass">رمز عبور خود را
+                      فراموش کرده‌اید؟</a>
+                  <button type="submit">وارد شوید</button>
+              </form>
+              <div class="button-link">ایا حساب کاربری ندارید؟
+                  <a href="#" id="signup-link">ثبت نام کنید</a>
+              </div>
+              
+
+          </div>
+      </div>
+
+
+<!--          siginUP-->
+
+        <div class="form-box signup">
+            <div class="form-welcome">
+                <h2>یک حساب کاربری بسازید</h2>
+                <p>به خانواده طعم‌های بی‌نظیر ما بپیوندید! با ثبت‌نام، اولین قدم را به سوی تجربه‌ای خوشمزه و لذت‌بخش بردارید. منتظر لحظات خوشمزه شما هستیم</p>
+            </div>
+            <div class="form-content">
+                <h2>ثبت نام کنید</h2>
+                <form action="#">
+                    <div class="input-field">
+                        <input class="input" type="text" title="Email address" required >
+                        <label for=""> ایمیل خود را وارد کنید:</label>
+                    </div>
+                    <div class="input-field">
+                        <input class="input" type="password" title="password" required>
+                        <label for="">رمز عبور  را وارد کنید:</label>
+                    </div>
+                    <div class="input-field">
+                      <input type="password" title="password" required>
+                      <label for="">رمز عبور خود را بار دیگر وارد کنید:</label>
+                  </div>
+                  <div class="Hide-text">
+                      <input type="checkbox" id="Hide">
+                      <label for="Hide">
+                          <p>نمایش رمز عبور</p>
+                      </label>
+                  </div>
+                    <div class="policy-text">
+                        <input type="checkbox" id="policy">
+                        <label for="policy">
+                            <a>با قوانین و شرایط استفاده موافقم و آماده‌ام</a>
+                        </label>
+                    </div>
+
+                    <button type="submit">وارد شوید</button>
+                </form>
+                <div class="button-link">ایا حساب کاربری دارید؟
+                    <a href="#" id="login-link">وارد شوید</a>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <script src="Menu.js"></script>
+  </body>
+</html>

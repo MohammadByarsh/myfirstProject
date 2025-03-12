@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حریم خصوصی | TastyLand</title>
+    <link rel="stylesheet" href="privacy.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      href="imagesIMG/_377d8ed4-d229-43a5-87fa-dd3af7dc2715 (1).png"
+      type="image/png"
+    />
+    <style>
+        /* ======== استایل اسکرول‌بار برای مرورگرهای مدرن ======== */
+
+/* برای مرورگرهای WebKit (Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+  width: 10px; /* پهنای اسکرول‌بار */
+}
+
+  /* رنگ پس‌زمینه‌ی اسکرول‌بار */
+  ::-webkit-scrollbar-track {
+    background: hsl(0, 3%, 18%); /* خاکستری تیره‌تر از پس‌زمینه‌ی بادی */
+    border-radius: 10px;
+  }
+  
+  /* رنگ اسکرول (دسته‌ی اسکرول) */
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #f4a261, #e9c46a); /* ترکیب نارنجی و زرد طلایی */
+    border-radius: 10px;
+    transition: background 0.3s ease-in-out;
+  }
+  
+  /* افکت هنگام هاور روی اسکرول */
+  ::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, #e76f51, #f4a261); /* تغییر رنگ به طیف گرم‌تر */
+  }
+  
+  /* ======== برای فایرفاکس (scrollbar-width) ======== */
+  html {
+    scrollbar-width: thin; /* باریک‌تر کردن اسکرول‌بار */
+    scrollbar-color: #f4a261 hsl(0, 3%, 18%); /* رنگ دسته و پس‌زمینه */
+  }
+
+  
+  
+  
+        /* استایل کلی صفحه حریم خصوصی */
+body {
+    font-family: "Vazirmatn", sans-serif;
+    background: linear-gradient(135deg, #1a1a1a, #3b141c);
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    line-height: 1.8;
+}
+
+.container {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #ffcc00;
+    text-shadow: 0 0 10px #ffcc00, 0 0 20px #ff8800;
+}
+
+h2 {
+    font-size: 1.8rem;
+    color: #ffcc00;
+    margin-top: 20px;
+}
+
+p {
+    font-size: 1.1rem;
+    color: #ddd;
+    margin-bottom: 15px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li::before {
+    content: "\f058";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    margin-right: 10px;
+    color: #ffcc00;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background: linear-gradient(135deg, #ffcc00, #ff8800);
+    color: #222;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #ff8800, #ffcc00);
+    transform: scale(1.05);
+}
+
+/* ریسپانسیو */
+@media (max-width: 768px) {
+    .container {
+        margin: 20px;
+        padding: 20px;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+    h2 {
+        font-size: 1.5rem;
+    }
+    p {
+        font-size: 1rem;
+    }
+}
+/* دکمه بازگشت */
+.back-button {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.back-button a {
+    background: linear-gradient(135deg, #ffcc00, #ff8800);
+    color: #222;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.back-button a:hover {
+    background: linear-gradient(135deg, #ff8800, #ffcc00);
+    transform: scale(1.05);
+}
+    </style>
+</head>
+<body dir="rtl">
+    <header class="header">
+        <div class="container">
+            <h1>حریم خصوصی</h1>
+            <p>ما به حفظ اطلاعات شما متعهد هستیم</p>
+        </div>
+    </header>
+    
+    <section class="privacy-content">
+        <div class="container">
+            <h2>جمع‌آوری اطلاعات</h2>
+            <p>ما اطلاعات کاربران را برای ارائه خدمات بهتر جمع‌آوری می‌کنیم. این اطلاعات شامل نام، ایمیل، شماره تلفن و موارد مشابه است.</p>
+            
+            <h2>استفاده از اطلاعات</h2>
+            <p>ما از اطلاعات جمع‌آوری‌شده برای بهبود خدمات، ارتباط با کاربران و ارائه پیشنهادهای شخصی‌سازی‌شده استفاده می‌کنیم.</p>
+            
+            <h2>امنیت اطلاعات</h2>
+            <p>ما تدابیر امنیتی لازم را برای محافظت از اطلاعات شما در برابر دسترسی‌های غیرمجاز به کار می‌بریم.</p>
+            
+            <h2>حقوق کاربران</h2>
+            <p>شما می‌توانید در هر زمان درخواست حذف یا ویرایش اطلاعات شخصی خود را داشته باشید.</p>
+        </div>
+    </section>
+    
+    <footer class="footer">
+        <div class="container">
+            <p>© 2025 TastyLand | تمامی حقوق محفوظ است</p>
+        </div>
+    </footer>
+    <!-- دکمه بازگشت -->
+<div class="back-button">
+    <a href="menu.html"><i class="fas fa-arrow-left"></i> بازگشت به صفحه اصلی</a>
+</div>
+
+
+    
+
+      <script>
+       
+
+
+
+scrollTopBtn.addEventListener("click", () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
+      </script>
+</body>
+</html>

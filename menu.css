@@ -1,0 +1,1821 @@
+/* استایل‌های عمومی */
+* {
+  font-family: "Vazirmatn", serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+:root {
+  --white-color: #ffffff;
+  --red-color: #e53935;
+  --yellow-color: #fdd835;
+  --Orange-color: #fb8c00;
+  --Black-color: #212121;
+  --Pink-color: #f48fb1;
+  --Blue-color: #81d4fa;
+  --yellowglob-color: #ffd54f;
+  --gray-color: #455a64;
+  --prime-color: #3b141c;
+  --medium-gray-color: #ccc;
+  --light-pink-color: #faf4f5;
+  --main-color: #ff702a;
+  /* پالت رنگی  */
+
+  --dark-bg-color: #1a1a1a; /* زمینه تیره */
+  --soft-orange: #f4a261; /* نارنجی ملایم */
+  --turquoise: #2a9d8f; /* فیروزه‌ای */
+  --golden-yellow: #e9c46a; /* زرد طلایی */
+  --dark-blue: #264653; /* آبی خاکی */
+  --container-color: hsl(230, 100%, 96%);
+  --border-color: hsl(230, 50%, 90%);
+  --text-color: hsl(230, 16%, 45%);
+  --title-color: hsl(230, 70%, 16%);
+  --gold-crayola: hsl(38, 61%, 73%);
+  --quick-silver: hsla(0, 0%, 65%, 1);
+  --davys-grey: hsla(30, 3%, 34%, 1);
+  --smoky-black-1: hsla(40, 12%, 5%, 1);
+  --smoky-black-2: hsla(30, 8%, 5%, 1);
+  --smoky-black-3: hsla(0, 3%, 7%, 1);
+  --eerie-black-1: hsla(210, 4%, 9%, 1);
+  --eerie-black-2: hsla(210, 4%, 11%, 1);
+  --eerie-black-3: hsla(180, 2%, 8%, 1);
+  --eerie-black-4: hsla(0, 0%, 13%, 1);
+  --white: hsla(0, 0%, 100%, 1);
+  --white-alpha-20: hsla(0, 0%, 100%, 0.2);
+  --white-alpha-10: hsla(0, 0%, 100%, 0.1);
+  --black: hsla(0, 0%, 0%, 1);
+  --black-alpha-80: hsla(0, 0%, 0%, 0.8);
+  --black-alpha-15: hsla(0, 0%, 0%, 0.15);
+
+  /**
+   * GRADIENT COLOR
+   */
+
+  --loading-text-gradient: linear-gradient(90deg, transparent 0% 16.66%, var(--smoky-black-3) 33.33% 50%,  transparent 66.66% 75%);
+  --gradient-1: linear-gradient(to top,hsla(0, 0%, 0%, 0.9),hsla(0, 0%, 0%, 0.7),transparent);
+
+  /**
+   * TYPOGRAPHY
+   */
+
+  /* font-family */
+  --fontFamily-forum: 'Forum', cursive;
+  --fontFamily-dm_sans: 'DM Sans', sans-serif;
+
+  /* font-size */
+  --fontSize-display-1: calc(1.3rem + 6.7vw);
+  --fontSize-headline-1: calc(2rem + 2.5vw);
+  --fontSize-headline-2: calc(1.3rem + 2.4vw);
+  --fontSize-title-1: calc(1.6rem + 1.2vw);
+  --fontSize-title-2: 2.2rem;
+  --fontSize-title-3: 2.1rem;
+  --fontSize-title-4: calc(1.6rem + 1.2vw);
+  --fontSize-body-1: 2.4rem;
+  --fontSize-body-2: 1.6rem;
+  --fontSize-body-3: 1.8rem;
+  --fontSize-body-4: 1.6rem;
+  --fontSize-label-1: 1.4rem;
+  --fontSize-label-2: 1.2rem;
+
+  /* font-weight */
+  --weight-regular: 400;
+  --weight-bold: 700;
+
+  /* line-height */
+  --lineHeight-1: 1em;
+  --lineHeight-2: 1.2em;
+  --lineHeight-3: 1.5em;
+  --lineHeight-4: 1.6em;
+  --lineHeight-5: 1.85em;
+  --lineHeight-6: 1.4em;
+
+  /* letter-spacing */
+  --letterSpacing-1: 0.15em;
+  --letterSpacing-2: 0.4em;
+  --letterSpacing-3: 0.2em;
+  --letterSpacing-4: 0.3em;
+  --letterSpacing-5: 3px;
+
+  /**
+   * SPACING
+   */
+
+  --section-space: 70px;
+
+  /**
+   * SHADOW
+   */
+
+  --shadow-1: 0px 0px 25px 0px hsla(0, 0%, 0%, 0.25);
+
+  /**
+   * BORDER RADIUS
+   */
+
+  --radius-24: 24px;
+  --radius-circle: 50%;
+
+  /**
+   * TRANSITION
+   */
+
+  --transition-1: 250ms ease;
+  --transition-2: 500ms ease;
+  --transition-3: 1000ms ease;
+
+
+  
+}
+/* ======== استایل اسکرول‌بار برای مرورگرهای مدرن ======== */
+
+/* برای مرورگرهای WebKit (Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+  width: 10px; /* پهنای اسکرول‌بار */
+}
+
+/* رنگ پس‌زمینه‌ی اسکرول‌بار */
+::-webkit-scrollbar-track {
+  background: hsl(0, 3%, 18%); /* خاکستری تیره‌تر از پس‌زمینه‌ی بادی */
+  border-radius: 10px;
+}
+
+/* رنگ اسکرول (دسته‌ی اسکرول) */
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #f4a261, #e9c46a); /* ترکیب نارنجی و زرد طلایی */
+  border-radius: 10px;
+  transition: background 0.3s ease-in-out;
+}
+
+/* افکت هنگام هاور روی اسکرول */
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #e76f51, #f4a261); /* تغییر رنگ به طیف گرم‌تر */
+}
+
+/* ======== برای فایرفاکس (scrollbar-width) ======== */
+html {
+  scrollbar-width: thin; /* باریک‌تر کردن اسکرول‌بار */
+  scrollbar-color: #f4a261 hsl(0, 3%, 18%); /* رنگ دسته و پس‌زمینه */
+}
+
+body{
+  background-color: hsl(0, 1%, 26%);
+}
+
+/* استایل کلی لودینگ */
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #1a0d04; /* پس‌زمینه تیره */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
+}
+
+/* دایره چرخان */
+.loader-circle {
+  width: 50px;
+  height: 50px;
+  border: 5px solid rgba(255, 255, 255, 0.2);
+  border-top-color: #ffcc80;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 20px; /* فاصله از لوگو */
+}
+
+/* انیمیشن چرخش دایره */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* استایل لوگو */
+.logo-animation {
+  font-size: 2.5rem;
+  color: #ffcc80;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: "Playwrite HR Lijeva", cursive;
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  text-align: center;
+  animation: glow 1.5s ease-in-out infinite alternate, fadeIn 2s ease-out;
+}
+
+/* افکت درخشش */
+@keyframes glow {
+  0% { text-shadow: 0 0 10px #ffcc80, 0 0 20px #ffcc80; }
+  100% { text-shadow: 0 0 20px #ffcc80, 0 0 40px #ffcc80; }
+}
+
+/* افکت ظاهر شدن */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: scale(0.9); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+/* مخفی کردن لودینگ بعد از لود کامل */
+.preloader.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.header {
+  animation: fadeIn 0.8s ease-out;
+}
+
+
+
+.nav-links.active {
+  font-weight: bold;
+  color: #ffd54f;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+
+/* نوار زیر لینک فعال */
+.nav-links.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 3px;
+  background: #ffd54f;
+  border-radius: 5px;
+  transition: width 0.3s ease-in-out;
+}
+
+/* افکت هنگام هاور روی لینک فعال */
+.nav-links.active:hover {
+  color: #ffcc80;
+}
+
+
+/* تنظیمات منوی ناوبری */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 30px;
+  position: relative;
+}
+
+/* تنظیمات لوگو */
+.nav-logo {
+  color: var(--yellowglob-color);
+  font-family: "Playwrite HR Lijeva", cursive;
+  font-weight: 400;
+  font-size: 30px;
+}
+
+/* منوی لیست */
+.nav--menu {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.nav-list {
+  display: flex;
+  gap: 40px;
+}
+
+/* آیکون‌های منو */
+.nav-item a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 25px;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-item a:hover {
+  color: var(--yellowglob-color);
+  transform: scale(1.1);
+  text-shadow: 0 0 10px var(--yellowglob-color),
+    0 0 20px var(--yellowglob-color);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* تنظیمات آیکون‌ها */
+.nav--actions {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+/* آیکون‌ها هنگام هاور */
+.nav--actions i {
+  font-size: 25px;
+  color: #aaaaaa;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav--actions i:hover {
+  transform: scale(1.2);
+}
+
+/* تنظیمات آیکون‌ها هنگام هاور */
+.search-button:hover {
+  color: #ff5722;
+  text-shadow: 0 0 10px #ff5722, 0 0 20px #ff5722;
+  box-shadow: 0px 4px 15px rgba(255, 87, 34, 0.4);
+}
+
+.login-button:hover {
+  color: #81d4fa;
+  text-shadow: 0 0 10px #81d4fa, 0 0 20px #81d4fa;
+  box-shadow: 0px 4px 15px rgba(129, 212, 250, 0.4);
+}
+
+.heart-solid:hover {
+  color: brown;
+  text-shadow: 0 0 10px brown, 0 0 20px brown;
+  box-shadow: 0px 4px 15px rgba(139, 69, 19, 0.4);
+}
+
+.cart-icon:hover {
+  color: #455a64;
+  text-shadow: 0 0 10px #455a64, 0 0 20px #455a64;
+  box-shadow: 0px 4px 15px rgba(69, 90, 100, 0.4);
+}
+
+/* ریسپانسیو برای صفحه‌های کوچکتر از 768px */
+@media screen and (max-width: 768px) {
+  .nav {
+    flex-direction: row-reverse;
+    padding: 20px 15px;
+    align-items: flex-start;
+    gap: 15px;
+    direction: ltr;
+  }
+
+  .nav-logo {
+    font-size: 28px;
+    margin-left: auto;
+    margin-right: 30px; /* فاصله بیشتر برای لوگو */
+  }
+
+  .nav-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .nav-item a {
+    font-size: 20px;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .nav-item a:hover {
+    background-color: var(--yellowglob-color);
+    color: #ffffff;
+    transform: scale(1.05);
+  }
+
+  .nav--actions {
+    width: 100%;
+    justify-content: flex-start;
+    gap: 25px;
+    margin-top: 20px;
+  }
+
+  .nav--actions i {
+    font-size: 26px;
+  }
+}
+
+/* ریسپانسیو برای صفحه‌های خیلی کوچک */
+@media screen and (max-width: 480px) {
+  .nav {
+    padding: 15px 10px;
+  }
+
+  .nav-logo {
+    font-size: 24px;
+  }
+
+  .nav-item a {
+    font-size: 18px;
+  }
+
+  .nav--actions {
+    gap: 20px;
+  }
+
+  .nav--actions i {
+    font-size: 24px;
+  }
+}
+
+
+/* main */
+
+/* بخش Hero */
+/* تنظیمات کلی */
+.hero {
+  position: relative;
+  overflow: hidden;
+  font-family: 'Roboto', sans-serif; /* استفاده از فونت مدرن */
+  width: 100%;
+  height: 100vh; /* به اندازه کامل صفحه */
+}
+
+.hero-slider {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.hero-item {
+  width: 100%;
+  height: 100vh; /* تنظیم ارتفاع به اندازه صفحه */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.hero-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* پر کردن فضای اسلاید بدون تغییر نسبت تصویر */
+  filter: brightness(60%); /* کمی تیرگی برای نمای بهتر متن */
+}
+
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  font-size: 3rem; /* اندازه بزرگ‌تر برای متن */
+  font-weight: 600; /* ضخیم‌تر شدن متن */
+  letter-spacing: 1px; /* فاصله بین حروف */
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5); /* سایه به متن برای خوانایی بیشتر */
+}
+
+
+/* استایل دکمه */
+.btn {
+  margin-top: 20px; /* فاصله از متن */
+  padding: 15px 40px;
+  background-color: #ff5722;
+  color: white;
+  text-decoration: none;
+  border-radius: 50px; /* گرد شدن بیشتر دکمه */
+  font-size: 1.2rem;
+  font-weight: 500;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 6px 15px rgba(255, 87, 34, 0.3); /* سایه ملایم */
+}
+
+.btn:hover {
+  background-color: #ff7043; /* رنگ پس‌زمینه هنگام هاور */
+  transform: scale(1.1); /* بزرگتر شدن دکمه هنگام هاور */
+  box-shadow: 0 10px 20px rgba(255, 87, 34, 0.5); /* سایه بزرگتر */
+}
+
+
+
+
+
+/* استایل دکمه‌ها */
+/* استایل دکمه‌ها */
+.prev-btn, .next-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #333;
+  border: 2px solid #ff5722; /* حاشیه نارنجی رنگ */
+  padding: 15px 25px;
+  font-size: 1.8rem;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 10;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* سایه اطراف دکمه */
+}
+
+/* دکمه قبلی */
+.prev-btn {
+  left: 20px;
+}
+
+/* دکمه بعدی */
+.next-btn {
+  right: 20px;
+}
+
+/* افکت هاور */
+.prev-btn:hover {
+  background-color: #ff5722; /* تغییر رنگ پس‌زمینه به نارنجی */
+  color: white; /* تغییر رنگ متن به سفید */
+}
+
+.next-btn:hover {
+  background-color: #ff5722; /* تغییر رنگ پس‌زمینه به نارنجی */
+  color: white; /* تغییر رنگ متن به سفید */
+}
+
+/* تغییر جهت دکمه‌ها در حالت RTL */
+.prev-btn {
+  left: auto;
+  right: 20px; /* دکمه قبلی به سمت راست */
+}
+
+.next-btn {
+  right: auto;
+  left: 20px; /* دکمه بعدی به سمت چپ */
+}
+
+
+/* هدر */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10; /* قرار دادن هدر بالای اسلایدها */
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.7); /* پس‌زمینه هدر */
+  color: white;
+}
+
+
+/* انیمیشن برای زوم روی اسلاید */
+@keyframes zoomIn {
+  0% {
+    transform: scale(1); /* اندازه اصلی */
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1); /* کمی زوم کردن */
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1); /* برگشت به اندازه اصلی */
+    opacity: 1;
+  }
+}
+
+/* اسلاید‌ها */
+.hero-item {
+  width: 100%;
+  height: 100%;
+  display: none;  /* پیش‌فرض مخفی است */
+  position: relative;
+  z-index: -1;
+  transition: transform 0.5s ease;
+}
+
+.hero-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* تنظیمات اسلاید فعال */
+.hero-item.active {
+  display: block; /* نمایش اسلاید فعال */
+  animation: zoomIn 3s ease-out; /* زوم روی اسلاید فعال */
+  z-index: 1; /* برای قرار گرفتن روی بقیه اسلاید‌ها */
+}
+
+@media (max-width: 768px) {
+  .hero-content {
+    font-size: 1.2rem;
+  }
+
+  .btn {
+    padding: 12px 25px;
+    font-size: 1rem;
+  }
+
+  .hero-content h1 {
+    font-size: 2.5rem; /* اندازه عنوان در تبلت */
+  }
+
+  .hero-content p {
+    font-size: 1rem; /* اندازه متن توضیحات در تبلت */
+  }
+
+  /* تنظیمات برای عکس اسلاید در موبایل و تبلت */
+  .hero-item img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+/* ریسپانسیو برای موبایل */
+@media (max-width: 480px) {
+  .hero-content {
+    font-size: 1rem;
+  }
+
+  .btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem; /* اندازه عنوان در موبایل */
+  }
+
+  .hero-content p {
+    font-size: 0.9rem; /* اندازه متن توضیحات در موبایل */
+  }
+
+  /* تنظیمات برای عکس اسلاید در موبایل */
+  .hero-item img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+
+/* services */
+/* ======== چیدمان وسطی برای بخش خدمات ======== */
+/* ======== تنظیمات جدید برای بخش SERVICE ======== */
+.service-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+/* استایل عنوان اصلی و توضیحات */
+.service-header .section-subtitle {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #ff6600;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.service-header .section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--yellow-color);
+  margin-bottom: 12px;
+}
+
+.service-header .section-text {
+  font-size: 1.1rem;
+  color: var(--Pink-color);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* ======== تنظیمات چیدمان ======== */
+.service-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px; /* افزایش فاصله بین آیتم‌ها */
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+/* تنظیم ارتفاع برای چیدمان جدید */
+.service-item {
+  width: 320px;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+
+/* آیتم‌های بالاتر (صبحانه و نوشیدنی) */
+.service-item.top-item {
+  transform: translateY(-30px);
+}
+
+/* آیتم وسطی (پیش‌غذا) */
+.service-item.middle-item {
+  transform: translateY(30px);
+}
+
+/* افکت هاور روی کارت‌ها */
+.service-card:hover {
+  transform: scale(1.05);
+}
+
+/* استایل دکمه‌ها */
+.btn-text {
+  display: inline-block;
+  padding: 8px 16px;
+  font-weight: bold;
+  border-radius: 6px;
+  color: #ff6600;
+  transition: all 0.3s ease-in-out;
+}
+
+/* افکت دکمه هنگام هاور */
+.btn-text:hover {
+  color: white;
+  background-color: #ff6600;
+  transform: scale(1.1);
+}
+
+/* تصاویر کارت */
+.card-banner img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* افکت زوم روی تصاویر */
+.service-card:hover .card-banner img {
+  transform: scale(1.05);
+}
+
+/* تنظیم موقعیت متن برای وسط */
+.middle-item .service-header {
+  position: absolute;
+  top: -80px;
+  width: 100%;
+}
+.card-content h3 a{
+  color: var(--prime-color);
+  transition: .3s ease;
+}
+
+.card-content h3 a:hover{
+  color: #250e07;
+}
+
+/* ======== تصاویر متحرک در بخش SERVICE ======== */
+.shape {
+  position: absolute;
+  z-index: -1; /* اطمینان از اینکه پشت متن و کارت‌ها نباشد */
+  opacity: 0.8;
+  transition: transform 0.4s ease-in-out;
+}
+
+/* تصویر بالای سمت راست صبحانه */
+.shape-1 {
+  top: -50px; /* فاصله بیشتر از آیکون‌ها */
+  right: -240px; /* فاصله بیشتر از کارت‌ها */
+  width: 200px;
+  height: auto;
+  animation: floatUpDown 4s infinite ease-in-out alternate;
+}
+
+/* تصویر پایین سمت چپ نوشیدنی */
+.shape-2 {
+  bottom: -50px; /* فاصله بیشتر از آیکون‌ها */
+  left: -240px; /* فاصله بیشتر از کارت‌ها */
+  width: 250px;
+  height: auto;
+  animation: floatUpDown 4s infinite ease-in-out alternate;
+}
+
+/* انیمیشن حرکت بالا و پایین */
+@keyframes floatUpDown {
+  0% {
+      transform: translateY(0);
+  }
+  100% {
+      transform: translateY(20px);
+  }
+}
+
+/* اطمینان از نمایش صحیح روی آیتم‌ها */
+.service-item {
+  position: relative;
+  z-index: 1; /* کارت‌ها و متن‌ها بالاتر از تصاویر باشند */
+}
+
+
+
+/* ======== چیدمان جدید برای بخش تخفیف (offer) ======== */
+.offer {
+  
+    padding: 80px 0;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    color: #f8f9fa;
+    font-family: "Vazirmatn", sans-serif;
+    margin-top: 150px; /* فاصله بین دو بخش */
+    text-align: center;
+    position: relative;
+    background: linear-gradient(135deg, rgba(50, 50, 50, 0.9), rgba(70, 70, 70, 0.9)); /* ترکیب خاکستری‌های ملایم */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+.offer::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  width: 80%;
+  height: 10px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.2), transparent);
+  transform: translateX(-50%);
+  border-radius: 50%;
+  opacity: 0.3;
+}
+
+.offer-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ======== استایل متن‌ها ======== */
+.offer-content .subtitle {
+  font-size: 1.5rem; /* افزایش اندازه */
+    font-weight: bold;
+    color: var(--yellowglob-color);
+    margin-bottom: 12px;
+    text-transform: uppercase;
+}
+.offer-content {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+.offer-content h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #ffffff; /* سفید برای خوانایی بیشتر */
+  margin-bottom: 15px;
+  line-height: 1.4;
+}
+
+.offer-content p {
+  font-size: 1.1rem;
+  color: #dcdcdc; /* خاکستری روشن برای کنتراست بهتر */
+  margin-bottom: 15px;
+}
+
+/* هایلایت رنگی داخل متن */
+.highlight {
+  color: var(--Orange-color); /* نارنجی ملایم برای تأکید */
+  font-weight: bold;
+}
+
+/* متن ضخیم‌تر */
+.bold-text {
+  color: var(--Pink-color); /* صورتی برای ظاهری جذاب‌تر */
+  font-weight: bold;
+}
+
+/* ======== دکمه سفارش با کنتراست بهتر ======== */
+.btnfood {
+  display: inline-block;
+  background-color: #ff5722;
+  /* فیروزه‌ای برای هماهنگی بهتر */
+  color: var(--white-color);
+  padding: 12px 25px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+}
+
+/* افکت هنگام هاور */
+.btnfood:hover {
+  background: var(--red-color); /* قرمز برای جذب توجه هنگام هاور */
+  color: var(--white-color);
+  transform: scale(1.1);
+  box-shadow: 0px 8px 20px rgba(255, 87, 34, 0.5);
+}
+
+/* ======== اسلایدر خودکار برای عکس برگر ======== */
+/* ======== بهبود نمایش اسلایدر برای برگر دوبل ======== */
+.offerimg {
+  width: 400px;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 15px;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* استایل اصلی تصاویر */
+.slider img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+}
+
+/* تصویر فعال نمایش داده شود */
+.slider img.active {
+  opacity: 1;
+}
+
+
+
+
+/* ======== ریسپانسیو برای موبایل ======== */
+@media screen and (max-width: 768px) {
+  .offer-wrapper {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .offer-content {
+      max-width: 100%;
+  }
+
+  .offerimg {
+      width: 100%;
+  }
+}
+
+
+
+/* فوتر */
+
+.footer-nav {
+  display: none; /* ابتدا مخفی است */
+  justify-content: space-around;
+  align-items: center;
+  background: linear-gradient(135deg, #1a0d04 80%, #332922 20%);
+  box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.3);
+  padding: 15px 0;
+  border-radius: 15px;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  transition: transform 0.3s ease-in-out;
+  animation: footerSlideIn 0.6s ease-out; /* اجرای انیمیشن هنگام بارگذاری */
+}
+@keyframes footerSlideIn {
+  0% {
+    transform: translateY(100px); /* فوتر در ابتدا پایین باشد */
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0); /* فوتر به جای خود بازگردد */
+    opacity: 1;
+  }
+}
+
+
+.footer-nav .nav-item {
+  position: relative;
+  font-size: 30px; /* اندازه اصلی آیکون */
+  color: #ffffff;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+/* آیکون داخل فوتر */
+.footer-nav .nav-item i {
+  font-size: 1.8rem; /* سایز آیکون */
+}
+
+/* افکت کلیک */
+.footer-nav .nav-item:active {
+  transform: scale(0.85);
+}
+
+/* موج هنگام کلیک */
+.footer-nav .nav-item::after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 50%;
+  left: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  transform: scale(0);
+  transition: transform 0.4s ease-out, opacity 0.4s ease-out;
+  opacity: 0;
+}
+
+.footer-nav .nav-item:active::after {
+  transform: scale(2);
+  opacity: 1;
+}
+
+/* افکت هاور */
+.footer-nav .nav-item:hover {
+  transform: translateY(-5px); /* آیکون کمی بالا برود */
+  color: #ffcc80;
+}
+
+/* افکت هنگام کلیک */
+.footer-nav .nav-item:active {
+  transform: translateY(-8px); /* بیشتر بالا برود */
+  color: #ffab40;
+}
+
+/* تنظیمات برای موبایل و تبلت */
+@media screen and (max-width: 1150px) {
+  .nav--menu {
+    display: none;
+  }
+
+  .footer-nav {
+    display: flex;
+    background: linear-gradient(135deg, #1a0d04 90%, #332922 10%);
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.4);
+    border-radius: 12px;
+  }
+}
+
+/* ---search--- */
+
+.search {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 101;
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
+}
+
+/* هنگام نمایش */
+.search.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.search__form {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: linear-gradient(135deg, #ffffff 0%, #f5f5f5 100%);
+  border: 2px solid transparent;
+  border-radius: 50px;
+  padding: 12px 16px;
+  width: 50%;
+  max-width: 500px;
+  position: relative;
+  top: -25%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s ease-in-out;
+}
+
+/* افکت هنگام هاور */
+.search__form:hover {
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* هنگام فوکوس فرم */
+.search__form:focus-within {
+  border-color: #ff6600;
+  box-shadow: 0 6px 15px rgba(255, 102, 0, 0.3);
+}
+
+.search--inpute {
+  width: 100%;
+  padding: 12px 16px;
+  font-size: 1rem;
+  background-color: #f7f7f7;
+  color: #333;
+  border: 2px solid transparent;
+  border-radius: 25px;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* افکت هنگام کلیک داخل فیلد */
+.search--inpute:focus {
+  border-color: #ff6600; /* تغییر رنگ بوردر */
+  background-color: #fff;
+  box-shadow: 0 4px 10px rgba(255, 102, 0, 0.3);
+}
+
+/* Placeholder متحرک و زیبا */
+.search--inpute::placeholder {
+  color: #999;
+  font-style: italic;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+/* هنگام فوکوس، متن placeholder کمی حرکت کند */
+.search--inpute:focus::placeholder {
+  transform: translateY(-5px);
+  opacity: 0.7;
+}
+
+/* انیمیشن ورود فرم */
+.search.show .search__form {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* آیکون جستجو */
+.search-icon {
+  font-size: 1.5rem;
+  color: #ff6600;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* افکت هنگام هاور روی آیکون */
+.search__form:hover .search-icon {
+  transform: scale(1.1);
+}
+
+/* استایل دکمه بستن */
+/* دکمه بستن سرچ */
+.search-close {
+  position: absolute;
+  top: 80px;
+  right: 20px; /* در موبایل نزدیک‌تر به فرم */
+  font-size: 1.8rem;
+  background: #ff6600;
+  color: white;
+  border-radius: 50%;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  z-index: 105; /* بالاتر از همه */
+}
+
+/* افکت هنگام هاور */
+.search-close:hover {
+  background: #cc5200;
+  transform: rotate(90deg);
+}
+
+/* وقتی سرچ‌باکس باز شد، فوتر بره پشت */
+.search.show ~ .footer-nav {
+  display: none;
+}
+
+/* میدیا کوئری برای دستگاه‌های کوچکتر */
+@media screen and (max-width: 768px) {
+  .search-close {
+    top: 60px;
+    right: 10px;
+    font-size: 1.5rem;
+    padding: 4px 8px;
+  }
+
+  .search__form {
+    width: 90%; /* فرم تمام عرض در موبایل */
+  }
+}
+
+.search-box {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+}
+
+.search--inpute {
+  width: 100%;
+  padding: 10px 40px 10px 15px; /* فضای کافی برای آیکون */
+  border: 2px solid #ff6600;
+  border-radius: 25px;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.search--inpute:focus {
+  border-color: #cc5200;
+  box-shadow: 0 0 10px rgba(255, 102, 0, 0.5);
+}
+
+/* دکمه بستن */
+.clear-button {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.2rem;
+  color: #ff6600;
+  background: white;
+  border: 2px solid #ff6600;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  opacity: 0; /* در ابتدا مخفی */
+  visibility: hidden;
+}
+
+/* افکت هاور */
+.clear-button:hover {
+  background: #ff6600;
+  color: white;
+}
+
+/* وقتی چیزی نوشته بشه، دکمه دیده بشه */
+.search--inpute:not(:placeholder-shown) + .clear-button {
+  opacity: 1;
+  visibility: visible;
+}
+
+.search--inpute::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  appearance: none;
+  display: none;
+}
+
+/* استایل سایدبار سبد خرید */
+#cart-sidebar {
+  position: fixed;
+  top: 0;
+  left: -320px; /* مخفی در حالت عادی */
+  width: 300px;
+  height: 100vh;
+  background: #222;
+  color: white;
+  padding: 20px;
+  transition: left 0.3s ease-in-out;
+  box-shadow: 5px 0 15px rgba(0, 0, 0, 0.3);
+  z-index: 1002;
+}
+
+/* زمانی که کلاس active اضافه شد، سایدبار نمایش داده شود */
+#cart-sidebar.active {
+  left: 0;
+}
+
+/* هدر سبد خرید */
+.cart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.cart-header h2 {
+  font-size: 1.5rem;
+  color: #ffcc00;
+}
+
+#close-cart {
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  color: white;
+  cursor: pointer;
+}
+
+/* بخش نمایش محصولات در سبد خرید */
+.cart-items {
+  flex: 1;
+  overflow-y: auto;
+  max-height: 60vh;
+  border-top: 1px solid #444;
+  border-bottom: 1px solid #444;
+  padding: 10px 0;
+}
+
+/* استایل دکمه پرداخت */
+.checkout-btn {
+  width: 100%;
+  padding: 10px;
+  background: #ffcc00;
+  color: #222;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* پس‌زمینه محو برای بستن سایدبار */
+#cart-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out;
+  z-index: 1001;
+}
+
+/* وقتی کلاس active اضافه شود، پس‌زمینه نمایش داده شود */
+#cart-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+/* استایل سایدبار لیست علاقه‌مندی‌ها */
+#wishlist-sidebar {
+  position: fixed;
+  top: 0;
+  right: -320px; /* مخفی در حالت عادی */
+  width: 300px;
+  height: 100vh;
+  background: #222;
+  color: white;
+  padding: 20px;
+  transition: right 0.3s ease-in-out;
+  box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
+  z-index: 1002;
+}
+
+/* زمانی که کلاس active اضافه شد، سایدبار نمایش داده شود */
+#wishlist-sidebar.active {
+  right: 0;
+}
+
+/* هدر لیست علاقه‌مندی‌ها */
+.wishlist-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.wishlist-header h2 {
+  font-size: 1.5rem;
+  color: #ff6600; /* رنگ مورد نظر شما */
+}
+
+#close-wishlist {
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  color: white;
+  cursor: pointer;
+}
+
+/* بخش نمایش آیتم‌های علاقه‌مندی */
+.wishlist-items {
+  flex: 1;
+  overflow-y: auto;
+  max-height: 60vh;
+  border-top: 1px solid #444;
+  border-bottom: 1px solid #444;
+  padding: 10px 0;
+}
+
+/* استایل دکمه مشاهده همه */
+.wishlist-btn {
+  width: 100%;
+  padding: 10px;
+  background: #ff6600; /* رنگ مورد نظر */
+  color: #222;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* پس‌زمینه محو برای بستن سایدبار */
+#wishlist-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out;
+  z-index: 1001;
+}
+
+/* وقتی کلاس active اضافه شود، پس‌زمینه نمایش داده شود */
+#wishlist-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+/* ======== دکمه پیمایش به بالا (Scroll to Top) ======== */
+
+.scroll-top-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  list-style: none;
+  z-index: 1000;
+}
+
+.scroll-top {
+  width: 55px;
+  height: 55px;
+  background: var(--turquoise); /* رنگ فیروزه‌ای */
+  color: #fff;
+  font-size: 1.5rem;
+  text-align: center;
+  line-height: 55px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0.8);
+  transition: all 0.3s ease-in-out;
+}
+
+/* نمایش دکمه هنگام اسکرول */
+.scroll-top.show {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: scale(1);
+}
+
+/* افکت هاور */
+.scroll-top:hover {
+  background: var(--soft-orange);
+  transform: scale(1.1);
+}
+
+
+/* ======== افکت محو شدن هدر هنگام اسکرول ======== */
+/* ======== افکت محو شدن هدر هنگام اسکرول ======== */
+.header {
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+/* زمانی که هدر مخفی می‌شود */
+.header.hidden {
+  opacity: 0;
+  transform: translateY(-50px);
+  pointer-events: none; /* جلوگیری از کلیک روی منو در حالت محو */
+}
+
+
+/* login------sign up */
+input{
+  background-color: #cccccc;
+}
+.blur-bg-overly{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(5px);
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s ease;
+  z-index: 999;
+}
+.show-popup .blur-bg-overly{
+  opacity: 1;
+  pointer-events: auto;
+}
+.form-peapol{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 480px;
+  width: 80%;
+  max-width: 800px;
+  background: #5f4233;
+  border: 3px solid var(--gray-color);
+  border-radius: 10px;
+  padding: 20px;
+  transform: translate(-50%,-100%);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 1000;
+}
+.show-popup .form-peapol{
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%,-50%);
+  transition: transform 0.3s ease,opacity 0.3s;
+}
+
+.form-peapol .form-box{
+  display: flex;
+}
+
+.form-box .form-welcome{
+  min-width: 330px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  background-blend-mode: darken;
+  background-color: rgba(0, 0, 0, 0.6); /* پس‌زمینه نیمه‌شفاف */
+  color: #ffffff; /* رنگ فونت سفید */
+  border: 3px solid var(--gray-color);
+  border-radius: 10px;
+  transition: filter 0.9s ease;
+  padding: 0 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* سایه برای عمق */
+}
+.form-box .form-welcome h2{
+  color: #ecaf3e;
+  font-size: 35px;
+  margin-bottom: 140px;
+  background-color: rgba(153, 77, 36, 0.349);
+  border-radius: 20px;
+}
+.form-box .form-welcome p{
+  /* color: rgb(226, 196, 23); */
+  /* background-color: #bb201a00; */
+  font-weight: 700;
+  background-color: rgba(108, 77, 58, 0.686);
+  border-radius: 20px;
+
+}
+.login .form-welcome{
+  background: url(imagesIMG/Home.jpg);
+  background-size: cover;
+  background-position: center ;
+}
+.signup .form-welcome{
+  background: url(imagesIMG/fast-food.jpg);
+  background-size: cover;
+  background-position: center ;
+}
+.form-welcome:hover{
+  filter: grayscale(100%); /* تصویر خاکستری شود */
+}
+.form-box h2{
+  text-align: center;
+  margin-bottom: 35px;
+}
+.form-box .form-content{
+  width: 100%;
+  padding: 35px;
+}
+form .input-field{
+  height: 50px;
+  width: 100%;
+  margin-top: 20px;
+  position: relative;
+}
+form .input-field input{
+  width: 100%;
+  height: 100%;
+  outline: none;
+  padding: 0 15px;
+  font-size: 0.95rem;
+  border-radius: 3px;
+  border: 3px solid var(--gray-color);
+}
+.input-field input:focus{
+  border-color: var(--Orange-color);
+}
+.input-field input:is(:focus,:valid){
+  padding: 16px 15px 0;
+}
+form .input-field label{
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  color: var(--gray-color);
+  pointer-events: none;
+  transform: translateY(-50%);
+  transition: 0.3s ease;
+}
+.input-field input:is(:focus,:valid) ~ label{
+  transform: translateY(-120%);
+  font-size: 0.75rem;
+  color: var(--gray-color);
+
+}
+.form-box a{
+  color: var(--yellow-color);
+
+}
+.form-box a:hover{
+  text-decoration: underline;
+}
+.form-box :where(.forgot-pass,policy-text){
+  display: inline-block;
+  margin-top: 14px;
+}
+form button{
+  width: 100%;
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 14px 0;
+  border-radius: 3px;
+  margin: 25px 0;
+  color: var(--white-color);
+  cursor: pointer;
+  background: var(--Orange-color);
+  transition: 0.2s ease;
+}
+form button:hover{
+  background: #fac512;
+}
+
+.form-peapol .Close-btn .Close{
+  width: 25px;
+  position: absolute;
+  right: 95%;
+  cursor: pointer;
+}
+.form-content h2{
+  color: #cccccc;
+}
+.Hide-text{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #fac512;
+}
+
+.signup .policy-text{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.Hide-text input{
+  width: 14px;
+  height: 14px;
+  margin-right: 7px;
+}
+
+
+.signup .policy-text input{
+  width: 14px;
+  height: 14px;
+  margin-right: 7px;
+
+}
+.form-peapol .signup,
+.form-peapol.show-signup .login{
+  
+  display: none;
+}
+.form-peapol.show-signup .signup{
+  display: flex;
+}
+/* ریسپانسیو login & signUP   */
+
+
+/* ریسپانسیو فرم برای عرض 849px و پایین‌تر */
+@media (max-width: 849px) {
+  .form-peapol {
+      min-width: 90%;
+      max-width: 700px;
+      width: 90%; 
+      padding: 20px;
+      border-radius: 8px;
+  }
+
+  .form-box {
+      flex-direction: column; 
+  }
+
+  .form-box .form-welcome {
+      min-width: 100%;
+      width: 100%;
+      padding: 15px;
+      font-size: 0.95rem;
+      text-align: center;
+      border-radius: 5px;
+      margin-bottom: 10px; /* فاصله بین بخش خوشامدگویی و فرم */
+  }
+
+  .form-box .form-content {
+      width: 100%; /* فرم تمام عرض صفحه شود */
+      padding: 20px;
+  }
+
+  .form-box h2 {
+      font-size: 1.8rem; /* تنظیم اندازه عنوان‌ها */
+  }
+
+  form .input-field {
+      margin-top: 15px;
+  }
+
+  form .input-field input {
+      font-size: 0.9rem;
+      padding: 10px; /* کاهش ارتفاع ورودی‌ها */
+  }
+
+  form button {
+      font-size: 1rem;
+      padding: 12px;
+  }
+
+  .form-peapol .Close-btn .Close {
+      width: 25px;
+      right: 10px;
+      top: 10px;
+  }
+  .form-peapol .Close-btn {
+      position: absolute;
+      top: 10px; 
+      right: 10px; 
+      width: 20px; 
+      cursor: pointer; 
+  }
+
+  .form-peapol .Close-btn img {
+      width: 100%; 
+  }
+  .form-peapol {
+      width: 90%; 
+      min-width: 300px; 
+      padding: 15px; 
+  }
+
+  .form-box {
+      flex-direction: column;
+  }
+
+  .form-box .form-welcome {
+      font-size: 14px; 
+      padding: 15px; 
+  }
+
+  .form-box .form-content {
+      padding: 20px; 
+  }
+
+  .form-box h2 {
+      font-size: 24px; 
+  }
+
+  form .input-field input {
+      font-size: 0.9rem; 
+  }
+
+  form button {
+      padding: 10px 0;
+      font-size: 0.9rem; 
+  }
+  .form-peapol .Close-btn {
+      position: absolute;
+      top: 10px; 
+      right: 10px; 
+      z-index: 10; 
+  }
+
+  .form-peapol .Close-btn img {
+      width: 20px; 
+      transition: transform 0.3s ease, background-color 0.3s ease; 
+  }
+
+  .form-peapol .Close-btn img:active {
+      transform: scale(1.1); 
+      background-color: rgba(255, 0, 0, 0.2); 
+  }
+
+}
+
+
